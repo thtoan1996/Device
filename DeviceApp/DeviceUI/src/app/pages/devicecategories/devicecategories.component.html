@@ -1,0 +1,27 @@
+<dx-data-grid 
+    id="gridContainer"
+    [dataSource]="dataSource"
+    showBorders="true"
+>
+    <dxo-paging [pageSize]="1"></dxo-paging>
+    <dxo-pager 
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[1, 5, 10, 20]"
+        [showInfo]="true">
+    </dxo-pager>    
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-group-panel [visible]="true"></dxo-group-panel>
+    <dxo-scrolling mode="virtual"></dxo-scrolling>
+    <!-- button add,edit,delete... -->
+    <dxo-editing
+        mode="row"
+        [allowAdding]="true"
+        [allowUpdating]="true"
+        [allowDeleting]="true">
+    </dxo-editing>
+
+    <dxi-column dataField="dcName" caption="Category Name"></dxi-column>
+    <dxi-column dataField="dcStatus" caption="Status"></dxi-column>
+   
+</dx-data-grid>

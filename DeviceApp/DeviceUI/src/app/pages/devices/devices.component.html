@@ -1,0 +1,43 @@
+<dx-data-grid 
+    id="gridContainer"
+    [dataSource]="dataSource"
+    showBorders="true"
+>
+    <dxo-paging [pageSize]="1"></dxo-paging>
+    <dxo-pager 
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[1, 5, 10, 20]"
+        [showInfo]="true">
+    </dxo-pager>    
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-group-panel [visible]="true"></dxo-group-panel>
+    <dxo-scrolling mode="virtual"></dxo-scrolling>
+    <!-- các nút button thực thi thêm, sửa, xoá,... -->
+    <dxo-editing
+        mode="row"
+        [allowAdding]="true"
+        [allowUpdating]="true"
+        [allowDeleting]="true">
+    </dxo-editing>
+
+    <dxi-column dataField="dName" caption="Device Name">
+
+    </dxi-column>
+
+    <dxi-column dataField="dProducer" caption="Producer"></dxi-column>
+
+    <dxi-column dataField="dWarranty" caption="Warranty"> 
+        
+    </dxi-column>
+
+    <dxi-column dataField="dPrice" caption="Price"></dxi-column>
+
+    <dxi-column dataField="dBandwidth" caption="Bandwidth">
+    </dxi-column>
+
+    <dxi-column dataField="dStatus" caption="Status"></dxi-column>
+
+    <dxi-column dataField="dcId" caption="Category ID"></dxi-column>
+    
+</dx-data-grid>
